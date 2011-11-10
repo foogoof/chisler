@@ -1,13 +1,14 @@
 # chisler
 
-FIXME: write description
+Chisler intends to solve 3d sculpting problems by chisling away
+what doesn't belong
 
 ## Usage
 
-FIXME: write
+Way to crude to use
 
 ## License
 
-Copyright (C) 2011 FIXME
+Copyright (C) 2011 Seth Schroeder, foogoof@gmail.com
 
 Distributed under the Eclipse Public License, the same as Clojure.

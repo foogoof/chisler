@@ -2,5 +2,6 @@
   (:use [chisler.core])
   (:use [clojure.test]))
 
-(deftest replace-me ;; FIXME: write
-  (is false "No tests have been written."))
+(deftest test-wood
+  (is true (marked? (chisler.core.Wood. (atom false))))
+  )
