@@ -5,4 +5,5 @@
   (break [self])
   (mark [self])
   (unmark [self])
-  (marked? [self] false))
+  (marked? [self] false)
+  (display-char [self] \space))

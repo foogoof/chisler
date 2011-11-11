@@ -1,5 +1,5 @@
 (ns chisler.core
-  (:refer-clojure :exclude [==])
+  (:refer-clojure :exclude [== print])
   (:use [clojure.core.logic]
         [slingshot.slingshot :only [throw+]]))
 

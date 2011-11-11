@@ -29,3 +29,4 @@
   (is (fit forrest 2 2))
   (is (fit forrest 3 1))
   (is (not (fit forrest 3 2))))
+
