@@ -1,6 +1,6 @@
 (in-ns 'chisler.core)
 
-(deftype Wood [marker]
+(deftype Marble [marker]
   ASpace
   (break [self] (throw+ "ack! splinters!"))
   (mark [self] (change-mark marker true))

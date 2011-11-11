@@ -2,6 +2,7 @@
   (:use [chisler.core])
   (:use [clojure.test]))
 
-(deftest test-wood
-  (is true (marked? (chisler.core.Wood. (atom false))))
+(deftest test-marble
+  (is (marked? (chisler.core.Marble. (atom true))))
+  (is (not (marked? (chisler.core.Marble. (atom false)))))
   )
