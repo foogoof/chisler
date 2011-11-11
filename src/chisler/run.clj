@@ -1,7 +1,11 @@
 (in-ns 'chisler.core)
 
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
 (defn min-length [marble-count group-count]
   (+ marble-count (dec group-count)))
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 (defrecord Run [length]
   ARun
@@ -17,4 +21,3 @@
       #_(str edge \newline line \newline edge \newline)
       line
       )))
-
