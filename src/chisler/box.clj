@@ -2,7 +2,7 @@
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-(deftype Box [marker a-space]
+(defrecord Box [marker a-space]
   ASpace
   (break [self] (break a-space) a-space)
   (mark [self] (change-mark marker true))
