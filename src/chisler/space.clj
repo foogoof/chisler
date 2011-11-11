@@ -4,7 +4,7 @@
 
 (deftype Space []
   ASpace
-  (break [self])
+  (break [self] self)
   (mark [self])
   (unmark [self])
   (marked? [self] false)

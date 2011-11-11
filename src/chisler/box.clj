@@ -2,9 +2,9 @@
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-(defrecord Box [marker a-space]
+(defrecord Box [marker space]
   ASpace
-  (break [self] (break a-space) a-space)
+  (break [self] (break space))
   (mark [self] (change-mark marker true))
   (unmark [self] (change-mark marker false))
   (marked? [self] @marker)
