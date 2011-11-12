@@ -3,15 +3,14 @@
   (:use [clojure.test])
   (:use [slingshot.slingshot :only [throw+]]))
 
-(def marble (chisler.core.Marble. (atom false)))
-(def space (chisler.core.Space.))
-(def marble-in-a-box (chisler.core.Box. (atom false) marble))
-(def nothing-in-a-box (chisler.core.Box. (atom false) space))
+(def marble (make-space :marble))
+(def space (make-space :space))
 (def forrest (chisler.core.Run. 3))
+(def marble-space-marble (space-seq [:marble :space :marble]))
 
-(deftest test-box
-  (is (instance? chisler.core.Space (break nothing-in-a-box)))
-  (is (thrown? slingshot.Stone (break marble-in-a-box))))
+(deftest test-break
+  #_(is (not (thrown? slingshot.Stone (break space))))
+  (is (thrown? slingshot.Stone (break marble))))
 
 (deftest test-min-length
   (is (= 1 (chisler.core/min-length 1 1)))
@@ -30,3 +29,7 @@
   (is (fit forrest 3 1))
   (is (not (fit forrest 3 2))))
 
+(deftest test-solved
+  (is (solved? forrest [marble]))
+  (is (not (solved? forrest [space])))
+  (is (not (solved? forrest marble-space-marble))))

@@ -14,6 +14,11 @@
 
   (fit [self marble-count] (fit self marble-count 1))
 
+  (solved? [self spaces]
+    (let [act-spaces (filter #(instance? chisler.core.Space %) spaces)]
+      (or (empty? act-spaces)
+          (every? broken? act-spaces))))
+  
   (print [self spaces]
     (let [midst (interpose " | " (map display-char spaces))
           line (str "| " (apply str midst) " |")

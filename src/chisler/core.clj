@@ -7,5 +7,4 @@
 (load "utils")
 (load "marble")
 (load "space")
-(load "box")
 (load "run")

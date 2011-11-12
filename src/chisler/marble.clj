@@ -1,9 +1,10 @@
 (in-ns 'chisler.core)
 
-(deftype Marble [marker]
+(deftype Marble [marker broken]
   ASpace
-  (break [self] (throw+ "whoops!"))
-  (mark [self] (change-mark marker true))
-  (unmark [self] (change-mark marker false))
+  (break [self] (reset! broken true) (throw+ "whoops!"))
+  (broken? [self] @broken)
+  (mark [self] (reset! marker true))
+  (unmark [self] (reset! marker false))
   (marked? [self] @marker)
   (display-char [self] \*))
